@@ -115,28 +115,28 @@ string day(int x)
 	switch (x)
 	{
 		case 1:
-			return "Понедельник";
+			return "РџРѕРЅРµРґРµР»СЊРЅРёРє";
 			break;
 		case 2:
-			return "Вторник";
+			return "Р’С‚РѕСЂРЅРёРє";
 			break;
 		case 3:
-			return "Среда";
+			return "РЎСЂРµРґР°";
 			break;
 		case 4:
-			return "Четверг";
+			return "Р§РµС‚РІРµСЂРі";
 			break;
 		case 5:
-			return "Пятница";
+			return "РџСЏС‚РЅРёС†Р°";
 			break;
 		case 6:
-			return "Суббота";
+			return "РЎСѓР±Р±РѕС‚Р°";
 			break;
 		case 7:
-			return "Воскресенье";
+			return "Р’РѕСЃРєСЂРµСЃРµРЅСЊРµ";
 			break;
 		default:
-			return "Дней недели только 7";
+			return "Р”РЅРµР№ РЅРµРґРµР»Рё С‚РѕР»СЊРєРѕ 7";
 			break;
 	}
 }
@@ -233,13 +233,13 @@ int * add(int arr[], int ins[], int pos, int arrSize, int insSize)
 		newArray[i] = arr[i];
 	}
 
-	// Вставляем элементы из ins
+	// Р’СЃС‚Р°РІР»СЏРµРј СЌР»РµРјРµРЅС‚С‹ РёР· ins
 	for (int i = 0; i < insSize; ++i)
 	{
 		newArray[pos + i] = ins[i];
 	}
 
-	// Копируем оставшиеся элементы из arr
+	// РљРѕРїРёСЂСѓРµРј РѕСЃС‚Р°РІС€РёРµСЃСЏ СЌР»РµРјРµРЅС‚С‹ РёР· arr
 	for (int i = pos; i < arrSize; ++i)
 	{
 		newArray[insSize + i] = arr[i];
@@ -249,153 +249,154 @@ int * add(int arr[], int ins[], int pos, int arrSize, int insSize)
 
 int main()
 {
+	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	int a;
-	cout << "Номера заданий:\n1 2 3 4 5 6 7 8 9 10 \n11 12 13 14 15 16 17 18 19 20 \nВыберите номер задания:";
+	cout << "РќРѕРјРµСЂР° Р·Р°РґР°РЅРёР№:\n1 2 3 4 5 6 7 8 9 10 \n11 12 13 14 15 16 17 18 19 20 \nР’С‹Р±РµСЂРёС‚Рµ РЅРѕРјРµСЂ Р·Р°РґР°РЅРёСЏ:";
 	cin >> a;
 	switch (a)
 	{
 	case 1:
 	{
 		double x;
-		cout << "Введите x:";
+		cout << "Р’РІРµРґРёС‚Рµ x:";
 		cin >> x;
-		cout << "Ответ:" << fraction(x);
+		cout << "РћС‚РІРµС‚:" << fraction(x);
 		break;
 	}
 	case 2:
 	{
 		char x;
-		cout << "Введите цыфру от 0 до 9:";
+		cout << "Р’РІРµРґРёС‚Рµ С†С‹С„СЂСѓ РѕС‚ 0 РґРѕ 9:";
 		cin >> x;
-		cout << "Ответ:" << charToNum(x);
+		cout << "РћС‚РІРµС‚:" << charToNum(x);
 	}
 	break;
 	case 3:
 	{
 		int x;
-		cout << "Введите число:";
+		cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ:";
 		cin >> x;
 		int y = is2Digits(x);
 		if (y == 0)
 		{
-			cout << "Ответ: False";
+			cout << "РћС‚РІРµС‚: False";
 		}
 		else
 		{
-			cout << "Ответ: True";
+			cout << "РћС‚РІРµС‚: True";
 		}
 		break;
 	}
 	case 4:
 	{
 		int a, b, num;
-		cout << "Введите границы (два числа) и число которое нужно проверить через пробел:";
+		cout << "Р’РІРµРґРёС‚Рµ РіСЂР°РЅРёС†С‹ (РґРІР° С‡РёСЃР»Р°) Рё С‡РёСЃР»Рѕ РєРѕС‚РѕСЂРѕРµ РЅСѓР¶РЅРѕ РїСЂРѕРІРµСЂРёС‚СЊ С‡РµСЂРµР· РїСЂРѕР±РµР»:";
 		cin >> a >> b >> num;
 		int y = isInRange(a, b, num);
 		if (y == 0)
 		{
-			cout << "Ответ: False";
+			cout << "РћС‚РІРµС‚: False";
 		}
 		else
 		{
-			cout << "Ответ: True";
+			cout << "РћС‚РІРµС‚: True";
 		}
 		break;
 	}
 	case 5:
 	{
 		int a, b, c;
-		cout << "Введите a, b, c через пробел:";
+		cout << "Р’РІРµРґРёС‚Рµ a, b, c С‡РµСЂРµР· РїСЂРѕР±РµР»:";
 		cin >> a >> b >> c;
 		int y = isEqual(a, b, c);
 		if (y == 0)
 		{
-			cout << "Ответ: False";
+			cout << "РћС‚РІРµС‚: False";
 		}
 		else
 		{
-			cout << "Ответ: True";
+			cout << "РћС‚РІРµС‚: True";
 		}
 		break;
 	}
 	case 6:
 	{
 		int x;
-		cout << "Введите x:";
+		cout << "Р’РІРµРґРёС‚Рµ x:";
 		cin >> x;
-		cout << "Ответ:" << abs1(x);
+		cout << "РћС‚РІРµС‚:" << abs1(x);
 		break;
 	}
 	case 7:
 	{
 		int x;
-		cout << "Введите x:";
+		cout << "Р’РІРµРґРёС‚Рµ x:";
 		cin >> x;
 		int y = is35(x);
 		if (y == 0)
 		{
-			cout << "Ответ: False";
+			cout << "РћС‚РІРµС‚: False";
 		}
 		else
 		{
-			cout << "Ответ: True";
+			cout << "РћС‚РІРµС‚: True";
 		}
 		break;
 	}
 	case 8:
 	{
 		int x, y, z;
-		cout << "Ввведите x, y, z через пробел:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x, y, z С‡РµСЂРµР· РїСЂРѕР±РµР»:";
 		cin >> x >> y >> z;
-		cout << "Ответ:" << max3(x, y, z);
+		cout << "РћС‚РІРµС‚:" << max3(x, y, z);
 		break;
 	}
 	case 9:
 	{
 		int x, y;
-		cout << "Ввведите x, y через пробел:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x, y С‡РµСЂРµР· РїСЂРѕР±РµР»:";
 		cin >> x >> y;
-		cout << "Ответ:" << sum2(x, y);
+		cout << "РћС‚РІРµС‚:" << sum2(x, y);
 		break;
 	}
 	case 10:
 	{
 		int x;
-		cout << "Введите x (от 1 до 7):";
+		cout << "Р’РІРµРґРёС‚Рµ x (РѕС‚ 1 РґРѕ 7):";
 		cin >> x;
-		cout << "Ответ:" << day(x);
+		cout << "РћС‚РІРµС‚:" << day(x);
 		break;
 	}
 	case 11:
 	{
 		int x;
-		cout << "Ввведите x:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x:";
 		cin >> x;
-		cout << "Ответ:" << listNums(x);
+		cout << "РћС‚РІРµС‚:" << listNums(x);
 		break;
 	}
 	case 12:
 	{
 		int x;
-		cout << "Ввведите x:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x:";
 		cin >> x;
-		cout << "Ответ:" << chet(x);
+		cout << "РћС‚РІРµС‚:" << chet(x);
 		break;
 	}
 	case 13:
 	{
 		int x;
-		cout << "Ввведите x:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x:";
 		cin >> x;
-		cout << "Ответ:" << numLen(x);
+		cout << "РћС‚РІРµС‚:" << numLen(x);
 		break;
 	}
 	case 14:
 	{
 		int x;
-		cout << "Ввведите x:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x:";
 		cin >> x;
 		square(x);
 		break;
@@ -403,7 +404,7 @@ int main()
 	case 15:
 	{
 		int x;
-		cout << "Ввведите x:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x:";
 		cin >> x;
 		rightTriangle(x);
 		break;
@@ -412,17 +413,17 @@ int main()
 	{
 		int arr[] = {1, 2, 3, 3, 2 ,1, 4};
 		int x;
-		cout << "Ввведите x:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x:";
 		cin >> x;
 		int size = sizeof(arr) / sizeof(arr[0]);
-		cout << "Ответ:" << findFirst(arr, size, x);
+		cout << "РћС‚РІРµС‚:" << findFirst(arr, size, x);
 		break;
 	}
 	case 17:
 	{
 		int arr[] = { 1, -2, -7, 4, 2, 2, 5 };
 		int size = sizeof(arr) / sizeof(arr[0]);
-		cout << "Ответ:" << maxAbs(arr, size);
+		cout << "РћС‚РІРµС‚:" << maxAbs(arr, size);
 		break;
 	}
 	case 18:
@@ -432,38 +433,38 @@ int main()
 		int pos;
 		int arrSize = sizeof(arr) / sizeof(arr[0]);
 		int insSize = sizeof(ins) / sizeof(ins[0]);
-		cout << "Введите номер позиции:";
+		cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїРѕР·РёС†РёРё:";
 		cin >> pos;
 		if ((pos >= 0)&(pos <= arrSize))
 		{
-			cout << "Ответ:" << * add(arr, ins, pos, arrSize, insSize);
+			cout << "РћС‚РІРµС‚:" << * add(arr, ins, pos, arrSize, insSize);
 			break;
 		}
 		else
 		{
-			cout << "Некорректная позиция!";
+			cout << "РќРµРєРѕСЂСЂРµРєС‚РЅР°СЏ РїРѕР·РёС†РёСЏ!";
 			break;
 		}
 	}
 	case 19:
 	{
 		int x;
-		cout << "Ввведите x:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x:";
 		cin >> x;
-		cout << "Ответ:" << numLen(x);
+		cout << "РћС‚РІРµС‚:" << numLen(x);
 		break;
 	}
 	case 20:
 	{
 		int x;
-		cout << "Ввведите x:";
+		cout << "Р’РІРІРµРґРёС‚Рµ x:";
 		cin >> x;
-		cout << "Ответ:" << numLen(x);
+		cout << "РћС‚РІРµС‚:" << numLen(x);
 		break;
 	}
 	default:
 	{
-		cout << "Такого задания не существует!";
+		cout << "РўР°РєРѕРіРѕ Р·Р°РґР°РЅРёСЏ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!";
 		break;
 	}
 	}
