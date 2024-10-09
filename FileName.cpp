@@ -43,7 +43,7 @@ bool isInRange(int a, int b, int num)
 		a = b;
 		b = c;
 	}
-	if ((num <= a)&(num >= b))
+	if ((num <= a)&&(num >= b))
 	{
 		return true;
 	}
@@ -55,7 +55,7 @@ bool isInRange(int a, int b, int num)
 
 bool isEqual(int a, int b, int c)
 {
-	if ((a == b) & (b == c))
+	if ((a == b) && (b == c))
 	{
 		return true;
 	}
@@ -103,7 +103,7 @@ int max3(int x, int y, int z)
 int sum2(int x, int y)
 {
 	int c = x + y;
-	if ((c >= 10) & (c <= 19))
+	if ((c >= 10) && (c <= 19))
 	{
 		c = 20;
 	}
@@ -225,35 +225,13 @@ int maxAbs(int arr[], int size)
 	return max;
 }
 
-int * add(int arr[], int ins[], int pos, int arrSize, int insSize)
-{
-	int* newArray = new int[arrSize + insSize];
-	for (int i = 0; i < pos; ++i) 
-	{
-		newArray[i] = arr[i];
-	}
-
-	// Вставляем элементы из ins
-	for (int i = 0; i < insSize; ++i)
-	{
-		newArray[pos + i] = ins[i];
-	}
-
-	// Копируем оставшиеся элементы из arr
-	for (int i = pos; i < arrSize; ++i)
-	{
-		newArray[insSize + i] = arr[i];
-	}
-	return newArray;
-}
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	int a;
-	cout << "Номера заданий:\n1 2 3 4 5 6 7 8 9 10 \n11 12 13 14 15 16 17 18 19 20 \nВыберите номер задания:";
+	cout << "Номера заданий:\n1 2 3 4 5 6 7 8 9 10 \n11 12 13 14 15 16 17 \nВыберите номер задания:";
 	cin >> a;
 	switch (a)
 	{
@@ -421,45 +399,9 @@ int main()
 	}
 	case 17:
 	{
-		int arr[] = { 1, -2, -7, 4, 2, 2, 5 };
+		int arr[] = { 1, -2, -7, 4, 2, 2, 5, 9 };
 		int size = sizeof(arr) / sizeof(arr[0]);
 		cout << "Ответ:" << maxAbs(arr, size);
-		break;
-	}
-	case 18:
-	{
-		int arr[] = { 1, 2, 3, 4, 5 };
-		int ins[] = { 7, 8, 9 };
-		int pos;
-		int arrSize = sizeof(arr) / sizeof(arr[0]);
-		int insSize = sizeof(ins) / sizeof(ins[0]);
-		cout << "Введите номер позиции:";
-		cin >> pos;
-		if ((pos >= 0)&(pos <= arrSize))
-		{
-			cout << "Ответ:" << * add(arr, ins, pos, arrSize, insSize);
-			break;
-		}
-		else
-		{
-			cout << "Некорректная позиция!";
-			break;
-		}
-	}
-	case 19:
-	{
-		int x;
-		cout << "Ввведите x:";
-		cin >> x;
-		cout << "Ответ:" << numLen(x);
-		break;
-	}
-	case 20:
-	{
-		int x;
-		cout << "Ввведите x:";
-		cin >> x;
-		cout << "Ответ:" << numLen(x);
 		break;
 	}
 	default:
